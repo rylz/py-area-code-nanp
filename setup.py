@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py-area-code-nanp",
-    version="1.0",
+    version="1.0.1",
     author="Riley Patterson",
     author_email="rileypatterson@gmail.com",
     description="Information about phone area codes in the North American Numbering Plan",
@@ -13,6 +13,8 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/rylz/py-area-code-nanp",
     packages=setuptools.find_packages(),
+    package_data={'': ['area_code_nanp/data/nanp.json']},
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
